@@ -3,7 +3,8 @@
   "builds": [
     {
       "src": "Source/public/index.php",
-      "use": "@vercel/php"
+      "use": "@vercel/php",
+      "config": { "composerInstall": true }
     }
   ],
   "routes": [
