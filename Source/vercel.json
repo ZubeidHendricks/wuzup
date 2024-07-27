@@ -1,16 +1,41 @@
 {
-    "version": 2,
-    "builds": [
-      {
-        "src": "Source/public/index.php",
-        "use": "@vercel/php"
-      }
-    ],
-    "routes": [
-      {
-        "src": "/(.*)",
-        "dest": "Source/public/index.php"
-      }
-    ]
+  "version": 2,
+  "builds": [
+    {
+      "src": "Source/public/index.php",
+      "use": "@vercel/php"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(css|js|images|fonts|assets)/(.*)",
+      "dest": "Source/public/$1/$2"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "Source/public/index.php"
+    }
+  ],
+  "env": {
+    "APP_NAME": "wuzzup",
+    "APP_ENV": "production",
+    "APP_DEBUG": "false",
+    "APP_KEY": "base64:ExktIRBYZDy3+mCubhTdhwO/v64GCsK1RuoW4z84LSc=",
+    "DB_HOST": "sql.freedb.tech",
+    "DB_DATABASE": "freedb_wuzzup",
+    "DB_USERNAME": "freedb_superadmin",
+    "MAIL_MAILER": "sendmail",
+    "MAIL_HOST": "smtp.mailtrap.io",
+    "MAIL_PORT": "2525",
+    "MAIL_FROM_NAME": "wuzzup",
+    "APP_CONFIG_CACHE": "/tmp/config.php",
+    "APP_EVENTS_CACHE": "/tmp/events.php",
+    "APP_PACKAGES_CACHE": "/tmp/packages.php",
+    "APP_ROUTES_CACHE": "/tmp/routes.php",
+    "APP_SERVICES_CACHE": "/tmp/services.php",
+    "VIEW_COMPILED_PATH": "/tmp",
+    "CACHE_DRIVER": "array",
+    "LOG_CHANNEL": "stderr",
+    "SESSION_DRIVER": "cookie"
   }
-  
+}
