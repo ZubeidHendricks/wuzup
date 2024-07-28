@@ -8,4 +8,6 @@
         order allow,deny
         Deny from all
     </Files>
+    # Handle 404 errors
+    ErrorDocument 404 /404.html
 </IfModule>
