@@ -2,19 +2,24 @@
   "version": 2,
   "builds": [
     {
-      "src": "Source/public/index.php",
+      "src": "index.php",
+      "use": "@vercel/php",
+      "config": { "composerInstall": true }
+    },
+    {
+      "src": "web.php",
       "use": "@vercel/php",
       "config": { "composerInstall": true }
     }
   ],
   "routes": [
     {
-      "src": "/(css|js|images|fonts|assets)/(.*)",
-      "dest": "Source/public/$1/$2"
+      "src": "/web.php",
+      "dest": "/index.php"
     },
     {
       "src": "/(.*)",
-      "dest": "Source/public/index.php"
+      "dest": "/index.php"
     }
   ],
   "env": {
