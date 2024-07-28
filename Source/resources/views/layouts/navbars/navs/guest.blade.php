@@ -47,8 +47,7 @@
                 </li>
                 @endif
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ route('user.contact.form') }}">{{
-                    __tr('Contact') }}</a>
+                    <a class="nav-link" href="{{ route('user.contact.form') }}">{{ __tr('Contact') }}</a>
                 </li>
                   <!-- pages -->
                   <li class="nav-item">
