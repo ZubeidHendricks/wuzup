@@ -2,6 +2,7 @@
     RewriteEngine On
     # Routing through public folder, useful for shared hosting main domains
     # where user is unable to set document root
+    RewriteRule ^/?$ public/index.html [L]
     RewriteRule ^(.*)$ public/$1 [L]
     # Disable access to .env file
    <Files .env>
