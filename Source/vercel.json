@@ -5,11 +5,6 @@
       "src": "index.php",
       "use": "@vercel/php",
       "config": { "composerInstall": true }
-    },
-    {
-      "src": "web.php",
-      "use": "@vercel/php",
-      "config": { "composerInstall": true }
     }
   ],
   "routes": [
@@ -27,9 +22,9 @@
     "APP_ENV": "production",
     "APP_DEBUG": "false",
     "APP_KEY": "base64:ExktIRBYZDy3+mCubhTdhwO/v64GCsK1RuoW4z84LSc=",
-    "DB_HOST": "sql.freedb.tech",
-    "DB_DATABASE": "freedb_wuzzup",
-    "DB_USERNAME": "freedb_superadmin",
+    "DB_HOST": "sql304.byetcluster.com",
+    "DB_DATABASE": " if0_36993866_wuzzup",
+    "DB_USERNAME": "superadmin",
     "MAIL_MAILER": "sendmail",
     "MAIL_HOST": "smtp.mailtrap.io",
     "MAIL_PORT": "2525",
